@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MEDRASA Design System - Arabic Professional Medical Education Platform
+All colors MUST be HSL for consistency.
+*/
+
+@layer base {
+  :root {
+    /* MEDRASA Arabic Brand Colors */
+    --primary: 178 83% 19%;        /* #0F5F53 Dark Teal */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 178 83% 15%;   /* Darker teal for hover */
+    
+    --secondary: 0 0% 100%;        /* #FFFFFF White */
+    --secondary-foreground: 178 83% 19%;
+    --secondary-hover: 0 0% 96%;
+    
+    --accent: 43 60% 55%;          /* #C5A253 Gold */
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 43 60% 50%;
+    
+    --background: 0 0% 100%;       /* #FFFFFF White */
+    --foreground: 178 83% 19%;     /* #0F5F53 Dark Teal */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 178 83% 19%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 178 50% 40%;
+    
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 178 83% 19%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Medical Theme Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-hover)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-navbar: linear-gradient(135deg, hsl(var(--primary)), hsl(178 83% 25%));
+    
+    /* Professional Shadows */
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-hero: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.15s ease-out;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-tajawal;
+    scroll-behavior: smooth;
+  }
+  
+  .font-english {
+    @apply font-garet;
+  }
+}
+
+@layer components {
+  /* Medical Theme Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-hover))] 
+           shadow-md hover:shadow-lg transition-all duration-200 px-6 py-3 rounded-lg font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-[hsl(var(--secondary-hover))] 
+           shadow-md hover:shadow-lg transition-all duration-200 px-6 py-3 rounded-lg font-medium;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:bg-[hsl(var(--accent-hover))] 
+           shadow-md hover:shadow-lg transition-all duration-200 px-6 py-3 rounded-lg font-medium;
+  }
+  
+  /* Professional Cards */
+  .card-elevated {
+    @apply bg-card text-card-foreground rounded-xl shadow-[var(--shadow-card)] 
+           hover:shadow-[var(--shadow-elevated)] transition-all duration-300 
+           transform hover:-translate-y-1;
+  }
+  
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Navigation Styles */
+  .nav-link {
+    @apply text-foreground/80 hover:text-primary transition-colors duration-200 
+           relative after:content-[''] after:absolute after:w-0 after:h-0.5 
+           after:bottom-0 after:left-0 after:bg-primary after:transition-all 
+           after:duration-200 hover:after:w-full;
+  }
+  
+  /* Form Styles */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background 
+           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent 
+           transition-all duration-200;
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-padding {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .font-garet {
+    font-family: 'Garet', sans-serif !important;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
