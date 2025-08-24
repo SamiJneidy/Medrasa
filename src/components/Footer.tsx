@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">مدرسة</h3>
+            <h3 className="text-2xl font-bold">MED-رَسَة</h3>
             <p className="text-primary-foreground/80 leading-relaxed">
               تمكين أطباء الأسنان بالخبرة التجارية والمعرفة التسويقية 
               لبناء عيادات ناجحة ومزدهرة.
@@ -32,8 +32,7 @@ const Footer = () => {
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
                 className="block hover:text-accent transition-colors"
               >
-                حول مدرسة
-              </button>
+                حول MED-رَسَة              </button>
               <button 
                 onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
                 className="block hover:text-accent transition-colors"
