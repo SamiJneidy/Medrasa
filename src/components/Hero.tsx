@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import heroBackgroundVideo from '../assets/hero-background.mp4';
+// import heroBackgroundVideo from '../assets/hero-background.mp4';
 import logo from '../assets/logo-transparent.png';
 
 const Hero = () => {
@@ -9,25 +9,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ minHeight: '120vh' }}>
-      {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
-        >
-          <source src={heroBackgroundVideo} type="video/mp4" />
-        </video>
-        {/* Removed hero-gradient overlay to show video clearly */}
-      </div>
-      
+      {/* Background Animated Gradient */}
+      <div className="absolute inset-0 z-0 hero-gradient pointer-events-none"></div>
+
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center justify-center min-h-screen" style={{ minHeight: '120vh' }}>
         <div className="mb-4 mt-4">
@@ -38,10 +22,10 @@ const Hero = () => {
           />
         </div>
         <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed font-semibold">
-        نُعلّم الأطباء والصيادلة مهارات البزنس، من البيع والتسويق إلى القيادة وإدارة العيادات باحترافية.
+          نُعلّم الأطباء والصيادلة مهارات البزنس، من البيع والتسويق إلى القيادة وإدارة العيادات باحترافية.
         </p>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-medium">
-        استثمر بنفسك اليوم، وارتقِ بعيادتك غداً
+          استثمر بنفسك اليوم، وارتقِ بعيادتك غداً
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -63,7 +47,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <button 
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white hover:text-accent transition-colors duration-200"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-white hover:text-accent transition-colors duration-200"
         aria-label="انتقل إلى قسم حول مدرسة"
       >
         <ChevronDown size={32} className="animate-bounce" />

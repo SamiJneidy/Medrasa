@@ -189,3 +189,21 @@ All colors MUST be HSL for consistency.
     overflow: hidden;
   }
 }
+
+
+/* index.css or globals.css */
+.hero-gradient {
+  background: linear-gradient(90deg, #102a3a, #1e5c63, #256d74, #2ea19e, #6ddad3);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease-in-out infinite alternate;
+}
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  

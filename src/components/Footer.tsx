@@ -11,8 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">MED-رَسَة</h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              تمكين أطباء الأسنان بالخبرة التجارية والمعرفة التسويقية 
-              لبناء عيادات ناجحة ومزدهرة.
+            نُعلّم الأطباء والصيادلة مهارات البزنس، من البيع والتسويق إلى القيادة وإدارة العيادات باحترافية.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
@@ -58,7 +57,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">تابعنا</h4>
             <p className="text-primary-foreground/80">
-              ابق على تواصل للحصول على آخر التحديثات والنصائح وقصص النجاح من مجتمع مدرسة.
+              ابق على تواصل للحصول على آخر الكورسات والنصائح من MED-رَسَة.
             </p>
             <div className="flex gap-4">
               <a 
